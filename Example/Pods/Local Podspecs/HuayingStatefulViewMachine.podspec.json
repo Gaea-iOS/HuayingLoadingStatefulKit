@@ -1,0 +1,22 @@
+{
+  "name": "HuayingStatefulViewMachine",
+  "version": "0.1.0",
+  "summary": "A short description of HuayingStatefulViewMachine.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/lzc1104/HuayingStatefulViewMachine",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "lzc1104": "527004184@QQ.COM"
+  },
+  "source": {
+    "git": "https://github.com/lzc1104/HuayingStatefulViewMachine.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "HuayingStatefulViewMachine/Classes/**/*"
+}

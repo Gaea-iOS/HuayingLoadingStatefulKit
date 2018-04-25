@@ -1,0 +1,6 @@
+framework module Pods_HuayingStatefulViewMachine_Tests {
+  umbrella header "Pods-HuayingStatefulViewMachine_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

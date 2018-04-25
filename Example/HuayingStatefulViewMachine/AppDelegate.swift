@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HuayingStatefulViewMachine
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let config = ViewStateConfiguration()
+        config.errorLoadingIcon = #imageLiteral(resourceName: "error")
+        config.errorRetryButtonBackgroudColor = UIColor.black
+        config.errorTextFontSize = 13
+        config.errorRetryButtonTitle = "重新加载"
+        config.errorRetryButtonFontColor = UIColor.white
+        config.errorRetryButtonFontSize = 11
+        
+        config.loadingTextColor = .black
+        config.loadingText = "加载中..."
+        config.loadingIcon = #imageLiteral(resourceName: "error")
+        
+        
+        config.emptyIcon = #imageLiteral(resourceName: "error")
+        config.emptyText = "没有数据了大哥"
+        config.emptyTextFontSize = 11
+        config.emptyTextColor = .gray
+        
+        config.placeholderBackgroundColor = UIColor.white
+        
+        ViewStateManager.shared.loadConfiguration(configuration: config)
         return true
     }
 

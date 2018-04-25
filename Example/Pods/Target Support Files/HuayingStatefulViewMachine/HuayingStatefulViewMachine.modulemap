@@ -1,0 +1,6 @@
+framework module HuayingStatefulViewMachine {
+  umbrella header "HuayingStatefulViewMachine-umbrella.h"
+
+  export *
+  module * { export * }
+}
