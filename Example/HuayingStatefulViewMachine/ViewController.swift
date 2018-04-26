@@ -16,16 +16,20 @@ class ViewController: UIViewController,DropDownAlertProtocol {
     @IBOutlet weak var drop: UIButton!
     override func viewWillAppear(_ animated: Bool) {
         
-        
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     @IBAction func onclict(_ sender: Any) {
         let error = NSError.init(domain: "666", code: 100, userInfo: [NSLocalizedDescriptionKey: "6666666666"])
         self.dropAlert(error: error)
         
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.navigationController?.setNavigationBarHidden(!self.navigationController!.navigationBar.isHidden, animated: true)
+    }
 }
 
-class ViewControllerPure: UIViewController, ViewStateMachineProtocol {
+class ViewControllerPure: UIViewController, ViewStateMachineProtocol,DropDownAlertProtocol  {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +38,7 @@ class ViewControllerPure: UIViewController, ViewStateMachineProtocol {
     
     override func viewWillAppear(_ animated: Bool) {
         self.testState()
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     func testState(times: Int = 0) {
@@ -43,6 +47,7 @@ class ViewControllerPure: UIViewController, ViewStateMachineProtocol {
                 self.state = .normal()
                 return
             }
+            self.dropAlert(error: NSError.init(domain: "666", code: 100, userInfo: [NSLocalizedDescriptionKey: "发生\(times)次错误"]))
             self.state = .loading("加载请求中...")
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(2), execute: {
                 DispatchQueue.main.async {
@@ -96,7 +101,6 @@ class ViewControllerWeb: UIViewController {
         self.webview = ProxyWebview(frame: CGRect.zero)
         self.view.addSubview(self.webview)
         self.webview.snp.makeConstraints { (make) in
-
             make.edges.equalToSuperview()
         }
         let urlString = "https://google.com"
