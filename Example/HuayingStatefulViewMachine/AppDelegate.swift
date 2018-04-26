@@ -38,6 +38,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         config.placeholderBackgroundColor = UIColor.white
         
         ViewStateManager.shared.loadConfiguration(configuration: config)
+        
+        UINavigationBar.appearance().isTranslucent = false
+        
+        
         return true
     }
 

@@ -4,7 +4,9 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - HuayingStatefulViewMachine (0.1.0)
+  - HuayingStatefulViewMachine (0.1.0):
+    - SnapKit
+  - SnapKit (4.0.0)
 
 DEPENDENCIES:
   - FBSnapshotTestCase (~> 2.1.4)
@@ -16,7 +18,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: '094f9f314decbabe373b87cc339bea235a63e07a'
-  HuayingStatefulViewMachine: 1ffdf3a3cd039c341e2e6be63115e040c0b128f7
+  HuayingStatefulViewMachine: fd23fa167a448835a6d56d69d6560fc9bab71faa
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
 PODFILE CHECKSUM: 81177e93a85e8bc296e1c077337becedc390b1dc
 

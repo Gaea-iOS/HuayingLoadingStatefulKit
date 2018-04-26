@@ -22,20 +22,34 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eFm-xg-Rbd">
-                                <rect key="frame" x="153.5" y="293.5" width="68" height="80"/>
+                                <rect key="frame" x="153.5" y="243.5" width="68" height="180"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I29-6Y-nx8">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIc-FI-dUY">
                                         <rect key="frame" x="0.0" y="0.0" width="68" height="30"/>
+                                        <state key="normal" title="DropError"/>
+                                        <connections>
+                                            <action selector="onclict:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="tbU-JI-NJI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I29-6Y-nx8">
+                                        <rect key="frame" x="0.0" y="50" width="68" height="30"/>
                                         <state key="normal" title="PureView"/>
                                         <connections>
                                             <segue destination="Pv5-nY-MaC" kind="push" id="JG0-K8-8U1"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfG-R4-75M">
-                                        <rect key="frame" x="0.0" y="50" width="68" height="30"/>
+                                        <rect key="frame" x="0.0" y="100" width="68" height="30"/>
                                         <state key="normal" title="Tableview"/>
                                         <connections>
                                             <segue destination="CSg-eR-Xip" kind="push" id="TJm-fQ-XAd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2N-1z-bws">
+                                        <rect key="frame" x="0.0" y="150" width="68" height="30"/>
+                                        <state key="normal" title="Webview"/>
+                                        <connections>
+                                            <segue destination="Ysb-Fj-iJq" kind="push" id="b5j-8g-MzT"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -48,6 +62,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Demo" id="etl-i9-6hV"/>
+                    <connections>
+                        <outlet property="drop" destination="HIc-FI-dUY" id="TFB-F1-b4A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -71,6 +88,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4uZ-04-XFB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="169" y="-192"/>
+        </scene>
+        <!--View Controller Web-->
+        <scene sceneID="g26-To-tdi">
+            <objects>
+                <viewController id="Ysb-Fj-iJq" customClass="ViewControllerWeb" customModule="HuayingStatefulViewMachine_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DvB-MU-9zZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Oqk-Hb-d0n"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XF3-I0-901">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eUX-4e-bQR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H0o-Al-BO1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-90" y="623"/>
         </scene>
         <!--View Controller Table-->
         <scene sceneID="R4c-7d-7AX">
@@ -104,7 +140,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRu-xc-ITL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="169" y="527"/>
+            <point key="canvasLocation" x="812" y="468"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4EF-Mb-aij">

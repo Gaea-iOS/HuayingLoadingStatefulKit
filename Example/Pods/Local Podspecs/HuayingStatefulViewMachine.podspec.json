@@ -18,5 +18,15 @@
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "HuayingStatefulViewMachine/Classes/**/*"
+  "source_files": "HuayingStatefulViewMachine/Classes/**/*",
+  "resource_bundles": {
+    "HuayingStatefulViewMachine": [
+      "HuayingStatefulViewMachine/Assets/*.png"
+    ]
+  },
+  "dependencies": {
+    "SnapKit": [
+
+    ]
+  }
 }

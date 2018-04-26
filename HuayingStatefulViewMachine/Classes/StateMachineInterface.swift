@@ -10,10 +10,16 @@ import Foundation
 
 public typealias VoidCallback = () -> Void
 
-
+/// 状态机管理加载流程视图的协议
 public protocol ViewStateMachineProtocol: class {
     var state: ViewState { get set }
 }
+
+/// 加载流程弹窗协议
+public protocol DropDownAlertProtocol: class {
+    func dropAlert(error: NSError)
+}
+
 
 /// 状态机基类
 public class ViewState: NSObject {
@@ -83,6 +89,9 @@ public class ViewStateConfiguration {
     public var errorTextFontColor: UIColor = UIColor.black
     
     public var placeholderBackgroundColor: UIColor = UIColor.white
+    
+    
+    public var webProgressColor: UIColor = .red
     
     public static var `default`: ViewStateConfiguration {
         ///TODO
