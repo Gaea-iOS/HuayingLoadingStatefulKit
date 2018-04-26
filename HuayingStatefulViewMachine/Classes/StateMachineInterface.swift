@@ -44,7 +44,7 @@ public class ViewState: NSObject {
     
     var holderView: UIView = UIView()
     func renderView() {
-        self.holderView.translatesAutoresizingMaskIntoConstraints = false
+//        self.holderView.translatesAutoresizingMaskIntoConstraints = false
         let stack = UIStackView()
         stack.axis = .vertical
         stack.alignment = .center
