@@ -19,6 +19,7 @@ Pod::Spec.new do |s|
   s.author           = { 'lzc1104' => '527004184@QQ.COM' }
   s.source           = { :git => 'https://github.com/Gaea-iOS/HuayingLoadingStatefulKit', :tag => s.version.to_s }
   s.ios.deployment_target = '9.0'
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
   s.source_files = 'HuayingStatefulViewMachine/Classes/**/*'
   s.resource_bundles = {
     'HuayingStatefulViewMachine' => ['HuayingStatefulViewMachine/Assets/*.png']
