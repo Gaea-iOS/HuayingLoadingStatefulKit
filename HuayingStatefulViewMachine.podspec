@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
         HuayingStatefulViewMachine
                        DESC
-
+  s.homepage         = 'https://github.com/Gaea-iOS/HuayingLoadingStatefulKit'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'lzc1104' => '527004184@QQ.COM' }
   s.source           = { :git => 'https://github.com/Gaea-iOS/HuayingLoadingStatefulKit', :tag => s.version.to_s }
